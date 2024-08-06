@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import Button from './components/Button/Button';
+import Input from './components/Input/Input';
 
 function App() {
 	const [counter, setCounter] = useState<number>(0);
 
 	return (
 		<>
-			<Button onClick={() => setCounter(counter + 1)} className={styles['accent']}>
+			<Input placeholder='Введите логин...'/>
+			<Input placeholder='Введите пароль...'/>
+			<Button onClick={() => setCounter(counter + 1)}>
         Кнопка
 			</Button>
-			<Button >
-        Кнопка большая
+			<Button appearance='big'>
+        Кнопка big
 			</Button>
-			{counter}
 		</>
 	);
 }

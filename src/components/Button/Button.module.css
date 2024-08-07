@@ -6,8 +6,17 @@
     font-size: 1rem;
     font-style: normal;
 
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    align-items: center;
+
     cursor: pointer;
     transition: background .5s ease;
+}
+
+.button img{
+    margin-left: -0.8rem;
 }
 
 .accent{

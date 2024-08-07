@@ -1,0 +1,96 @@
+.layout{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+.layoutMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-right: 1px solid var(--separator);
+
+    padding: 1.5rem;
+    width: 300px;
+    height: 100vh;
+}
+
+.layoutLink{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    transition: color 0.5s ease;
+}
+
+.layoutLink:hover{
+    color: var(--primary-color);
+}
+
+.active{
+    color: var(--primary-color);
+}
+
+.layoutLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin-top: -10rem;
+}
+
+.layoutItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+.layoutItem img{
+    width: 20px;
+}
+
+.layoutInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    margin-top: 3rem;
+}
+
+.layoutImg img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 8px 40px 0 var(--text-color-second);
+}
+
+
+.layoutName{
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.layoutEmail{
+    font-size: 0.8rem;
+    color: var(--text-color-second);
+}
+
+.activeLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 0.5rem;
+    color: var(--text-color-light);
+    background: var(--primary-color);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.layoutBody{
+    width: 100%;
+    padding: 3rem;
+}

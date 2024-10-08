@@ -1,0 +1,20 @@
+.input{
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    border: 1px solid var(--separator);
+    background: none;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    box-shadow: 15px 20px 45px 0 rgba(233, 233, 233, 0.25);
+}
+
+.input:placeholder-shown{
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--color-placeholder);
+}
+
+.input:focus{
+    outline: none;
+}

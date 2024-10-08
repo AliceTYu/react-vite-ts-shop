@@ -1,0 +1,24 @@
+:root {
+    --font: "Open Sans", sans-serif;
+    --primary-color: #a7148c; 
+    --primary-color-hover: #db15b7; 
+    --text-color: #000000;
+    --text-color-light: #ffffff;
+    --text-color-second: #5b5b5b;
+    --bc-color: #ffffff;
+    --separator: #d4d6e0;
+    --color-placeholder: #c4c4c4;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+}

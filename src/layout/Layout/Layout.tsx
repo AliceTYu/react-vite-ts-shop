@@ -1,10 +1,17 @@
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import styles from './Layout.module.css';
 import Button from '../../components/Button/Button';
 import cn from 'classnames';
 
 function Layout() {
 	const location = useLocation();
+	const navigate = useNavigate();
+
+	const logout = () => {
+		localStorage.removeItem('jwt');
+		navigate('/react-vite-ts-shop/auth/login');
+	};
+
 	return (
 		<div className={styles.layout}>
 			<div className={styles.layoutMenu}>
@@ -39,7 +46,7 @@ function Layout() {
 				</div>
 
 				<div>
-					<Button>
+					<Button onClick={logout}>
 						<img src="./out.svg" alt="выйти лого" />
 						Выйти
 					</Button>

@@ -1,0 +1,46 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 4rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blockInput{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.lable{
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--color-placeholder);
+}
+
+.blockReg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.error{
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.text{
+    color: var(--text-color-second);
+}
+
+.link{
+    color: var(--primary-color);
+}

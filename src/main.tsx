@@ -6,6 +6,10 @@ import Layout from './layout/Layout/Layout.tsx';
 import axios from 'axios';
 import { PREFIX } from './helpers/API.ts';
 import ErrorPage from './pages/Error/ErrorPage.tsx';
+import AuthLayout from './layout/Auth/Auth.layout.tsx';
+import Login from './pages/Login/Login.tsx';
+import Register from './pages/Register/Register.tsx';
+import { RequireAuth } from './helpers/RequireAuth.tsx';
 
 const Menu = lazy(() => import('./pages/Menu/Menu'));
 const Cart = lazy(() => import('./pages/Cart/Cart'));
@@ -14,7 +18,7 @@ const Product = lazy(() => import('./pages/Product/Product'));
 const router = createBrowserRouter([
 	{
 		path: '/react-vite-ts-shop/',
-		element: <Layout />,
+		element: <RequireAuth><Layout /></RequireAuth>,
 		children: [
 			{
 				path: '/react-vite-ts-shop/',
@@ -46,20 +50,21 @@ const router = createBrowserRouter([
 							}, 1000);
 						})
 					});
-					
-					// return defer ({
-					// 	data: await axios.get(`${PREFIX}/products/${params.id}`).then(data => data)
-					// });
-					
-					// await new Promise<void>((resolve) => {
-					// 	setTimeout(() => {
-					// 		resolve();
-					// 	}, 1000);
-					// });
-					// const { data } = await axios.get(`${PREFIX}/products/${params.id}`);
-					// console.log(params.id);
-					// return data;
 				}
+			}
+		]
+	},
+	{
+		path: '/react-vite-ts-shop/auth',
+		element: <AuthLayout/>,
+		children: [
+			{
+				path: 'login',
+				element: <Login/>
+			},
+			{
+				path: 'register',
+				element: <Register/>
 			}
 		]
 	},

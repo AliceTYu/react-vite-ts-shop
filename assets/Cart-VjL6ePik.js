@@ -1,0 +1,1 @@
+import{j as t}from"./index-DrAtXf37.js";import{T as r}from"./Title-B_jSurJ0.js";const s={};function i(){return t.jsx("div",{className:s.cart,children:t.jsx(r,{children:"Корзина"})})}export{i as default};
